@@ -32,6 +32,10 @@ class Game
 		@turn ||= player1
 	end
 
+	def has_two_players?
+		!player2.nil?
+	end
+
 	alias :current_player :turn
 
 private 
@@ -47,8 +51,5 @@ private
 	def switch_turns
 		turn == player1 ? self.turn = player2 : self.turn = player1
 	end
-
-	def has_two_players?
-		!player2.nil?
-	end
+	
 end

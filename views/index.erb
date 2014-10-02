@@ -1,0 +1,18 @@
+<% if @name == nil %>
+	 <h1>Hello Welcome to Battleships</h1>
+
+	 	 <section>
+	  		<form action="/registered" method="post">
+				Name: <input type="text" name="player_name" placeholder="Enter your name">
+			 		<input type="submit" value="Get Started">
+			</form>
+			<img src='/images/battleship.png'>
+	  	</section>
+<% end %> 
+
+
+<% if @name %>
+		<h3><%= @name %>, you've already registered to play. Go to this page to meet your adversary and place your ships </h3>
+<% end %>
+
+ 

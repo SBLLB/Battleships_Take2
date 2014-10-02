@@ -1,0 +1,11 @@
+<h1>Let's Get Started</h1>
+
+<% if GAME.has_two_players? %>
+	<meta http-equiv="refresh" content="0;/board">
+<% else %>
+	<% if @name %>
+	<h3>Thanks for registering <%= @name %> We're just waiting for your opponent to sign up so you can play! </h3>
+	<meta http-equiv="refresh" content="5">
+	<% end %>
+
+<% end %>
